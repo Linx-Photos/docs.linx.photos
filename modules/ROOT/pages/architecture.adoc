@@ -1,0 +1,30 @@
+= Architecture Overview
+:navtitle: Architecture
+
+Linx Photos is built as a robust, scalable backend for the photography industry. It bridges the gap between raw cloud storage and polished client-facing experiences.
+
+== Tech Stack
+
+Linx Photos leverages a modern, typesafe stack to ensure reliability and speed:
+
+* **Framework**: Astro 5.x for content delivery and SolidJS for interactive elements.
+* **Database**: Turso (libSQL) using Drizzle ORM for performant, distributed data.
+* **Auth**: Lucia Auth supporting major providers (Google, Microsoft, Apple).
+* **AI/OCR**: Tesseract.js for scanning physical contracts and converting them to Markdown.
+
+== Business Logic
+
+The platform is designed around a three-tier hierarchy:
+
+1. **Solo**: Independent photographers managing their own workflows.
+2. **Teams**: Collaborative groups working on large-scale events.
+3. **Studios**: Corporate entities with role-based access for owners, employees, and contractors.
+
+== The "Visual Join" System
+
+Our data organization strategy treats image metadata like a relational database. Photographers can create "Joins" to dynamically generate albums based on:
+* Photographer IDs
+* Event date ranges
+* Image ratings and tags
+
+This logic is mirrored across physical cloud folders (Google Drive, OneDrive, iCloud) to keep the source of truth synchronized.

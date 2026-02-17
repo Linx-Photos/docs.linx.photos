@@ -1,0 +1,47 @@
+= Zero-Config Style Injection
+:navtitle: SaaS Magic
+
+PhotoLink is designed to be a "Zero-Config" SaaS. The goal is for photographers to integrate our high-performance galleries into their existing websites without writing a single line of CSS or JavaScript.
+
+== The Challenge
+
+Most SaaS widgets (like Iframes) are black boxes. They don't know the host site's brand colors, fonts, or layout, leading to a disjointed user experience.
+
+== The Solution: Standardized Magic
+
+We utilize a three-part strategy to ensure our album service looks native to every photographer's site.
+
+=== 1. Environment Sniffing (Single Script Tag)
+
+The photographer includes a single `<script>` tag on their site. When this script runs, it performs an audit of the host environment:
+
+[source,javascript]
+----
+// Example of the sniffing logic
+const brandColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--primary-color') || '#000';
+const font = getComputedStyle(document.body).fontFamily;
+----
+
+It then injects the PhotoLink component and passes these identified tokens as parameters.
+
+=== 2. CSS Variable Bridge
+
+The PhotoLink application is built using CSS variables for all UI elements. These variables are mapped to the detected host styles on load.
+
+[source,css]
+----
+:root {
+  --saas-bg: var(--external-bg, #ffffff);
+  --saas-text: var(--external-text, #000000);
+}
+----
+
+=== 3. Proxy-Based Customization
+
+For standalone galleries (e.g., `albums.bigrpicture.com`), our backend "scrapes" the photographer's main site periodically to identify stylesheet links and primary branding. This allows the subdomain to reflect the main site's aesthetic automatically, even without being embedded.
+
+== Implementation Status
+
+[IMPORTANT]
+These patterns are currently in the **Architectural Design** phase and are being integrated into the core PhotoLink loader.

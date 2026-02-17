@@ -1,0 +1,5 @@
+.PhotoLink
+* xref:index.adoc[Introduction]
+* xref:architecture.adoc[Architecture]
+* xref:saas-magic.adoc[SaaS Magic]
+* xref:how-to-setup.adoc[Setup Guide]

@@ -1,0 +1,15 @@
+{
+  "name": "docs.linx.photos",
+  "version": "1.0.0",
+  "description": "Documentation for Linx Photos",
+  "main": "index.js",
+  "scripts": {
+    "dev": "antora antora-playbook.yml",
+    "build": "antora --fetch antora-playbook.yml"
+  },
+  "devDependencies": {
+    "@antora/cli": "^3.1.14",
+    "@antora/site-generator-default": "^3.1.14",
+    "antora-dark-theme": "^1.0.0"
+  }
+}

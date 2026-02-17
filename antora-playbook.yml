@@ -1,0 +1,18 @@
+site:
+  title: Linx Photos Documentation
+  url: https://docs.linx.photos
+  start_page: photo-service:ROOT:index.adoc
+content:
+  sources:
+  - url: .
+    branches: HEAD
+    start_path: .
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  supplemental_files: ./node_modules/antora-dark-theme/supplemental-ui
+output:
+  dir: ./public/docs
+runtime:
+  fetch: true

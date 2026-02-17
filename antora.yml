@@ -1,0 +1,5 @@
+name: photo-service
+title: Linx Photos
+version: ~
+nav:
+  - modules/ROOT/nav.adoc

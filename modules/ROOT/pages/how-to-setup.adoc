@@ -1,0 +1,59 @@
+= Setup Guide
+:navtitle: Setup
+
+Follow these steps to get PhotoLink running locally and connected to your infrastructure.
+
+== Prerequisites
+
+* Node.js (Latest LTS)
+* pnpm
+* A Turso (libSQL) database instance
+* API keys for cloud providers (Google, Microsoft, Apple)
+
+== Installation
+
+1. Clone the repository and navigate into the folder.
+2. Install dependencies:
++
+[source,sh]
+----
+pnpm install
+----
+
+3. Create a `.env` file based on `.env.example`:
++
+[source,sh]
+----
+cp .env.example .env
+----
+
+4. Populate your environment variables, including `DATABASE_URL`, `DATABASE_AUTH_TOKEN`, and your OAuth client secrets.
+
+== Development Workflow
+
+Start the local development server:
+
+[source,sh]
+----
+pnpm dev
+----
+
+The site will be available at `http://localhost:4321`.
+
+== Synchronizing the Database
+
+If you modify the database schema in `src/db/schema.ts`, use Drizzle Kit to sync your changes:
+
+[source,sh]
+----
+npx drizzle-kit push
+----
+
+== Building for Production
+
+To create a production build in the `dist/` directory:
+
+[source,sh]
+----
+pnpm build
+----

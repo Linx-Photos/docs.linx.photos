@@ -1,0 +1,32 @@
+= Linx Photos Documentation
+:navtitle: Introduction
+
+Welcome to the official documentation for **Linx Photos**, the "Zero-Config" SaaS for professional photographers.
+
+Linx Photos goes beyond simple image hosting. It is an end-to-end ecosystem designed to handle high-resolution asset delivery, legally binding contract automation, and seamless integration into any photographer's existing website.
+
+== Core Features
+
+* **High-Speed CDN Galleries**: Optimized for professional portfolios.
+* **RAW File Commerce**: Monetize high-end work with secure checkout and usage agreements.
+* **Legal Engine**: Automated contract handling with OCR capabilities.
+* **Zero-Config Integration**: "Magic" style adoption for host websites via the single-script loader.
+
+== Getting Started
+
+[cols="1,1"]
+|===
+| *Understand the Architecture* | *Setup Guide*
+
+| Learn how Linx Photos works under the hood, from Studio hierarchies to the "Visual Join" data model.
+| Follow our walkthrough to get Linx Photos running on your local machine and connected to your cloud providers.
+
+| xref:architecture.adoc[Learn more about Architecture]
+| xref:how-to-setup.adoc[Follow the Setup Guide]
+|===
+
+== Design Philosophy: The Chameleon SaaS
+
+One of the unique features of Linx Photos is its ability to "disappear" into a photographer's brand. Instead of forcing a one-size-fits-all UI, our album service is designed to sniff and adopt the host site's styles dynamically.
+
+xref:saas-magic.adoc[See how the "Magic Script" works.]
