@@ -1,7 +1,7 @@
 = Zero-Config Style Injection
 :navtitle: SaaS Magic
 
-PhotoLink is designed to be a "Zero-Config" SaaS. The goal is for photographers to integrate our high-performance galleries into their existing websites without writing a single line of CSS or JavaScript.
+Linx Photos is designed to be a "Zero-Config" SaaS. The goal is for photographers to integrate our high-performance galleries into their existing websites without writing a single line of CSS or JavaScript.
 
 == The Challenge
 
@@ -23,11 +23,11 @@ const brandColor = getComputedStyle(document.documentElement)
 const font = getComputedStyle(document.body).fontFamily;
 ----
 
-It then injects the PhotoLink component and passes these identified tokens as parameters.
+It then injects the Linx Photos component and passes these identified tokens as parameters.
 
 === 2. CSS Variable Bridge
 
-The PhotoLink application is built using CSS variables for all UI elements. These variables are mapped to the detected host styles on load.
+The Linx Photos application is built using CSS variables for all UI elements. These variables are mapped to the detected host styles on load.
 
 [source,css]
 ----
@@ -39,9 +39,9 @@ The PhotoLink application is built using CSS variables for all UI elements. Thes
 
 === 3. Proxy-Based Customization
 
-For standalone galleries (e.g., `albums.bigrpicture.com`), our backend "scrapes" the photographer's main site periodically to identify stylesheet links and primary branding. This allows the subdomain to reflect the main site's aesthetic automatically, even without being embedded.
+For standalone galleries (e.g., `albums.linx.photos`), our backend "scrapes" the photographer's main site periodically to identify stylesheet links and primary branding. This allows the subdomain to reflect the main site's aesthetic automatically, even without being embedded.
 
 == Implementation Status
 
 [IMPORTANT]
-These patterns are currently in the **Architectural Design** phase and are being integrated into the core PhotoLink loader.
+These patterns are currently in the **Architectural Design** phase and are being integrated into the core Linx Photos loader.
