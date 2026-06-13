@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "dprint.dprint",
+    "biomejs.biome",
+    "DavidAnson.vscode-markdownlint",
+    "asciidoctor.asciidoctor-vscode",
+    "bierner.markdown-mermaid"
+  ]
+}
