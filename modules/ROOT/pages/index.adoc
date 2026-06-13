@@ -10,9 +10,8 @@ Linx Photos goes beyond simple image hosting. It is an end-to-end ecosystem desi
 * **High-Speed CDN Galleries**: Optimized for professional portfolios.
 * **RAW File Commerce**: Monetize high-end work with secure checkout and usage agreements.
 * **Legal Engine**: Automated contract handling with OCR capabilities.
+* **Capture One desktop sync (preview)**: Browser pairing, `/api/desktop/v1` REST surface, album editions, and export fingerprint matching — see the `capture-one-linx-sync` repo in this workspace for CLI + sidecar schemas.
 * **Zero-Config Integration**: "Magic" style adoption for host websites via the single-script loader.
-
-== Getting Started
 
 [cols="1,1"]
 |===

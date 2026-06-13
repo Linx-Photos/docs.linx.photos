@@ -9,9 +9,9 @@ content:
     start_path: .
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    url: https://github.com/antora-supplemental/valentus-theme/releases/download/v1/ui-bundle.zip
     snapshot: true
-  supplemental_files: ./node_modules/antora-dark-theme/supplemental-ui
+  supplemental_files: ./supplemental-ui
 output:
   dir: ./public/docs
 runtime:
